@@ -1,0 +1,46 @@
+<h1>Find A random restaurant in your area!!!</h1>
+<div class="container">
+  <form [formGroup]="form" (submit)="submitForm()">
+    <label>State</label>
+    <br>
+    <input type="text" placeholder="state" formControlName="state" required>
+    <br>
+    <label>City</label>
+    <br>
+    <input type="text" placeholder="city" formControlName="city" required>
+    <br>
+    <label>Price</label>
+    <br>
+    <select placeholder="$$" formControlName="price" required>
+      <option value=1>$</option>
+      <option value=2>$$</option>
+      <option value=3>$$$</option>
+      <option value=4>$$$$</option>
+    </select>
+    <br>
+    <button type="submit">Find restaurant!</button>
+  </form>
+  
+  <div class="main">
+    <div *ngIf="restaurant">
+      <div class="box">
+        <img src="{{restaurant.image_url}}">
+        <h3>{{restaurant.name}}</h3>
+        <h3>{{restaurant.location.display_address}}</h3>
+        <h3>{{restaurant.display_phone}}</h3>
+  
+        <ul>
+          <h2 *ngIf="restaurant.rating === 1">{{one}}</h2>
+          <h2 *ngIf="restaurant.rating === 1.5">{{oneAndHalf}}</h2>
+          <h2 *ngIf="restaurant.rating === 2">{{two}}</h2>
+          <h2 *ngIf="restaurant.rating === 2.5">{{twoAndHalf}}</h2>
+          <h2 *ngIf="restaurant.rating === 3">{{three}}</h2>
+          <h2 *ngIf="restaurant.rating === 3.5">{{threeAndHalf}}</h2>
+          <h2 *ngIf="restaurant.rating === 4">{{four}}</h2>
+          <h2 *ngIf="restaurant.rating === 4.5">{{fourAndHalf}}</h2>
+          <h2 *ngIf="restaurant.rating === 5">{{five}}</h2>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

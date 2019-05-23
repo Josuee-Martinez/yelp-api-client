@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+  background-color: rgb(153, 216, 245);
+  padding: .3em;
+}
+
+form {
+  margin: 2em;
+}
+
+input {
+  padding: .5em;
+  margin: .2em;
+}
+
+button {
+  padding: .5em;
+  margin: .2em;
+  background-color: rgb(153, 216, 245);
+  border-radius: 2em;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+.box {
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
+  background-color: rgb(153, 216, 245);
+}
